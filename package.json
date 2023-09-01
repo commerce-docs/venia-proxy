@@ -1,0 +1,23 @@
+{
+  "name": "test-proxy",
+  "version": "1.0.0",
+  "description": "minimal proxy server for codesandbox testing",
+  "main": "index.html",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Commerce 42",
+  "scripts": {
+    "dev": "concurrently -k -s all 'node proxy-server.js --mode development' 'yarn vite --mode development'",
+    "prod": "concurrently -k -s all 'node proxy-server.js --mode production' 'yarn vite build' 'yarn vite --mode production'"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
+    "concurrently": "^8.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite": "^4.4.9"
+  }
+}

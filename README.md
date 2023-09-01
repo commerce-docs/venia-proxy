@@ -16,4 +16,4 @@ To run the app locally:
 You should see a single button at the top of the screen: **Fetch Categories from Venia**.
 Click it to fetch the product categories from the Venia graphql endpoint via the proxy server.
 
-<img width="296" alt="image" src="https://github.com/commerce-docs/venia-proxy/assets/1828494/e1e08552-e509-4f89-affe-00aac1145b9b">
+<img width="500" alt="image" src="https://github.com/commerce-docs/venia-proxy/assets/1828494/677e5c56-39d5-42ed-afc8-34bbef5456e9">

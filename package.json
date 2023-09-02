@@ -1,11 +1,11 @@
 {
-  "name": "test-proxy",
+  "name": "venia-proxy",
   "version": "1.0.0",
-  "description": "minimal proxy server for codesandbox testing",
+  "description": "Minimal proxy server for codesandbox testing",
   "main": "index.html",
   "type": "module",
   "license": "Apache-2.0",
-  "author": "Commerce 42",
+  "author": "Adobe Commerce 42",
   "scripts": {
     "dev": "concurrently -k -s all 'node proxy-server.js' 'yarn vite --open --mode development'",
     "prod": "yarn vite build && yarn vite preview --open"

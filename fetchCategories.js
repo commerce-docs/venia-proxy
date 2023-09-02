@@ -1,4 +1,3 @@
-const DEFAULT_CATEGORY_LEVEL = "2";
 const CATEGORIES_QUERY = `
   query ProductCategories($categoryLevel: String!) {
     categories(filters: { parent_id: { eq: $categoryLevel } }, currentPage: 1) {
@@ -20,23 +19,14 @@ const CATEGORIES_QUERY = `
   }
 `;
 
-// Build the API endpoint
-const buildApiEndpoint = (mode, hostname) => {
-  const protocol = mode === "production" ? "https" : "http";
-  return `${protocol}://${hostname}:3002`;
-};
-
 // Fetch product categories from venia.magento.com
-const fetchCategories = async (categoryLevel = DEFAULT_CATEGORY_LEVEL) => {
-  const { MODE: mode } = import.meta.env;
+const fetchCategories = async (categoryLevel = '2') => {
+
   const { hostname } = window.location;
-
-  const apiEndpoint = buildApiEndpoint(mode, hostname);
-
-  console.log(`🚀 Running in ${mode} mode on ${apiEndpoint}`);
-
+  const GRAPHQL_ENDPOINT = import.meta.env.VITE_GRAPHQL_ENDPOINT;
+ 
   try {
-    const response = await fetch(apiEndpoint, {
+    const response = await fetch(GRAPHQL_ENDPOINT, {
       method: "POST",
       headers: {
         "X-Custom-Hostname": hostname,

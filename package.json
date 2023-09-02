@@ -7,8 +7,8 @@
   "license": "Apache-2.0",
   "author": "Commerce 42",
   "scripts": {
-    "dev": "concurrently -k -s all 'node proxy-server.js --mode development' 'yarn vite --mode development'",
-    "prod": "concurrently -k -s all 'node proxy-server.js --mode production' 'yarn vite build' 'yarn vite --mode production'"
+    "dev": "concurrently -k -s all 'node proxy-server.js' 'yarn vite --open --mode development'",
+    "prod": "yarn vite build && yarn vite preview --open"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.0.4",

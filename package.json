@@ -8,7 +8,7 @@
   "author": "Adobe Commerce 42",
   "scripts": {
     "dev": "concurrently -k -s all 'node proxy-server.js' 'yarn vite --open --mode development'",
-    "prod": "yarn vite build && yarn vite preview --open"
+    "prod": "yarn vite build && yarn vite preview"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.0.4",

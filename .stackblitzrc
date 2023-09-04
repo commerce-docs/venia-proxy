@@ -1,0 +1,7 @@
+{
+  "installDependencies": false,
+  "startCommand": "prod",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
